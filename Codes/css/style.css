@@ -1,0 +1,16 @@
+body{
+	background-color: #dae2e6;
+	margin:0 auto;
+}
+#head{
+	background-color: green;
+	height: 90px;
+	width: 100%;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	overflow: hidden; 
+	z-index: 99;
+	border-bottom: 2px solid #363636;
+
+}
