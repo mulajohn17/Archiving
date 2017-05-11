@@ -3,22 +3,67 @@
 <head>
 	<title>St. Elizabeth</title>
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+<style>
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+#con{
+	margin-top: 150px;
+
+}
+</style>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <body>
 <div id="head">
 <img src="icon/sehilogo-small.PNG">
-<div id = "menu">
-	<ul>
-			<a href = "prof.php" target="main"><li class = "active" id = "choices" >Profiling</li></a>
-			<a href = "list.php" target="main"><li id = "choices">Employee List</li></a>
-			<a href = "pending.php" target="main"><li id = "choices">Pending</li></a>
-			<a href = "act.php" target="main"><li id = "choices">Activity Log</li></a>
-			<a href = "manage/dash.php" target="main"><li id = "choices">Manage</li></a>
-			<a href = "report/index.php" target="main"><li id = "choices">REPORT</li></a>
-			<a href = "out.php"><li id = "choices">Log Out</li></a>
-
-	</ul>
-	</div>
 </div>
+<div id="con">
+<div class="container">
+ <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Tutorials
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a tabindex="-1" href="#">HTML</a></li>
+      <li><a tabindex="-1" href="#">CSS</a></li>
+      <li class="dropdown-submenu">
+        <a class="test" tabindex="-1" href="#">New dropdown <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+          <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+          <li class="dropdown-submenu">
+            <a class="test" href="#">Another dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">3rd level dropdown</a></li>
+              <li><a href="#">3rd level dropdown</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</div>
+<script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
+
+
 </body>
 </html>
